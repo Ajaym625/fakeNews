@@ -1,0 +1,139 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="AuThemes Templates">
+    <meta name="author" content="AuCreative">
+    <meta name="keywords" content="AuThemes Templates">
+
+    <!-- Title Page-->
+    <title>Fake News Detector</title>
+    <!-- Icons font CSS-->
+    <link href= "{% static 'home/vendor/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'home/vendor/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+
+
+    <!-- Main CSS-->
+    <link href="{% static 'home/css/main.css' %}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-img-1 p-t-275 p-b-100">
+        <h4 class="title">Fake News Detector</h4>
+        <div class="wrapper wrapper--w820">
+            <div class="card card-1">
+                <div class="card-heading">
+                    <h3 class="card-title">Select The News Type</h3>
+                </div>
+                <div class="card-body">
+                    <form class="wizard-container" method="post" action="{% url 'what_score'%}" id="js-wizard-form">
+                        {% csrf_token %}
+                        <ul class="tab-list">
+                            <li class="tab-list__item ">
+                                <a class="tab-list__link" href="#tab1" data-toggle="tab">
+                                    <span class="step">1</span>
+                                    <span class="desc">URL</span>
+                                </a>
+                            </li>
+                            <li class="tab-list__item ">
+                                <a class="tab-list__link" href="#tab2" data-toggle="tab">
+                                    <span class="step">2</span>
+                                    <span class="desc">Who</span>
+                                </a>
+                            </li>
+                            <li class="tab-list__item ">
+                                <a class="tab-list__link" href="#tab3" data-toggle="tab">
+                                    <span class="step">3</span>
+                                    <span class="desc">When</span>
+                                </a>
+                            </li>
+                            <li class="tab-list__item active">
+                                <a class="tab-list__link" href="#tab4" data-toggle="tab">
+                                    <span class="step">4</span>
+                                    <span class="desc">What</span>
+                                </a>
+                            </li>
+                            <li class="tab-list__item">
+                                <a class="tab-list__link" href="#tab5" data-toggle="tab">
+                                    <span class="step">5</span>
+                                    <span class="desc">Where</span>
+                                </a>
+                            </li>
+                            <li class="tab-list__item">
+                                <a class="tab-list__link" href="#tab6" data-toggle="tab">
+                                    <span class="step">6</span>
+                                    <span class="desc">Why</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab3">
+                                <div class="form">
+                                    <div class="input-group">
+                                            <select name="topic" id="topic" class=" form-select input--style-1" style="height: 50px;padding-right: 345px;">
+                                                <option selected>Select Topic</option>
+                                                {% for item in topic %}
+                                                <option  value="{{item}}">{{item}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        <!-- </input> -->
+                                        <!-- <a type="button" class="btn--next" >next step</a> -->
+                                        <button  type="submit"  class="btn btn-success btn--next">next step</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </form> 
+                            <!-- <div class="tab-pane" id="tab2">
+                                <div class="form">
+                                    <div class="input-group">
+                                        <input class="input--style-1" type="email" name="email" placeholder="ex: example@email.com" required="required">
+                                        <a class="btn--next" href="#">next step</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab3">
+                                <div class="form">
+                                    <div class="input-group">
+                                        <input class="input--style-1" type="password" name="password" placeholder="Password" id="password" required="required">
+                                        <a class="btn--next" href="#">next step</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab4">
+                                <div class="form">
+                                    <div class="input-group">
+                                        <input class="input--style-1" type="password" name="re_password" placeholder="Password" required="required">
+                                        <a class="btn--next" href="#">Confirm</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!-- </div>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'home/vendor/jquery/jquery.min.js' %}"></script>
+    <!-- Vendor JS-->
+    <script src="{% static 'home/vendor/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'home/vendor/bootstrap-wizard/bootstrap.min.js' %}"></script>
+    <script src="{% static 'home/vendor/bootstrap-wizard/jquery.bootstrap.wizard.min.js' %}"></script>
+
+
+    <!-- Main JS-->
+    <script src="{% static 'home/js/global.js' %}"></script>
+
+</body>
+
+</html>
+<!-- end document-->
