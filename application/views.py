@@ -17,12 +17,10 @@ from pytimeextractor import ExtractionService, PySettingsBuilder
 import pandas as pd
 from datetime import date
 import string    
-import inquirer
 import spacy
 import pandas as pd
 import geopy 
 import math as Math
-import inquirer
 from geopy.extra.rate_limiter import RateLimiter
 from geopy.geocoders import Nominatim
 from googlesearch import search 
