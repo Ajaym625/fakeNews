@@ -1,4 +1,4 @@
-beautifulsoup4
+beautifulsoup4==4.9.3
 deep_translator==1.8.3
 Django==3.2.7
 django_heroku==0.3.1
@@ -7,7 +7,7 @@ googlesearch_python==1.1.0
 goose3==3.1.11
 inquirer==2.9.2
 langdetect==1.0.9
-newspaper==0.1.0.6
+newspaper==0.1.0.7
 newspaper3k==0.2.8
 nltk==3.5
 pandas==1.4.1
