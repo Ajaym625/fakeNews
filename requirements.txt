@@ -7,7 +7,7 @@ googlesearch_python==1.1.0
 goose3==3.1.11
 inquirer==2.9.2
 langdetect==1.0.9
-pyjnius==1.1.1
+pyjnius==1.1.3
 newspaper3k==0.2.8
 nltk==3.5
 pandas==1.4.1
