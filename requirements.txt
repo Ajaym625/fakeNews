@@ -3,7 +3,6 @@ deep_translator
 Django
 django_heroku
 geopy
-googlesearch_python
 goose3
 inquirer
 langdetect
