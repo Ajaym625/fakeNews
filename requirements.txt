@@ -1,4 +1,4 @@
-Cython
+Cython3
 beautifulsoup4==4.9.3
 deep_translator==1.8.3
 Django==3.2.7
