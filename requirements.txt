@@ -1,4 +1,4 @@
-Cython3
+Cython
 beautifulsoup4==4.9.3
 deep_translator==1.8.3
 Django==3.2.7
@@ -9,7 +9,7 @@ goose3==3.1.11
 inquirer==2.9.2
 
 langdetect==1.0.9
-pyjnius==1.1.1
+pyjnius
 newspaper3k==0.2.8
 nltk==3.5
 pandas==1.4.1
