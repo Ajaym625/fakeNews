@@ -9,7 +9,7 @@ inquirer==2.9.2
 langdetect==1.0.9
 pyjnius
 newspaper
-newspaper3k==0.2.8
+newspaper3k
 nltk==3.5
 pandas==1.4.1
 pytimeextractor
