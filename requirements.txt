@@ -1,3 +1,4 @@
+gunicorn 
 django-widget-tweaks
 django-cors-headers
 Cython
