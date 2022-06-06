@@ -1,3 +1,4 @@
+widget_tweaks
 Cython
 beautifulsoup4==4.9.3
 deep_translator==1.8.3
